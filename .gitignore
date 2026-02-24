@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# 临时文件
+*.tmp
+.DS_Store
+
+# 不需要提交的日志文件
+fast_update.log
+image_update.log

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epstein Flight Log: Passenger Manifests and Aviation Records</title>
+    <meta name="description" content="Examine individual Epstein flight log entries with detailed passenger manifests, routes, dates, and flight crew information. Search specific flights and passengers.">
+    <meta name="keywords" content="Epstein flight log, Epstein passenger manifest, Epstein flight records, Epstein aviation logs, Epstein flight documents">
+    <link rel="canonical" href="https://epstein-files.news/c/epstein-flight-log">
+    <style>
+        :root {
+    --color-bg: #0D1117;
+    --color-bg-alt: #161B22;
+    --color-text: #E6EDF3;
+    --color-text-muted: #8B949E;
+    --color-link: #58A6FF;
+    --color-link-hover: #79C0FF;
+    --color-border: #30363D;
+    --color-accent: #F0883E;
+    --color-warning: #D29922;
+
+    --font-body: 'Georgia', 'Times New Roman', serif;
+    --font-heading: '-apple-system', BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+    --max-width: 800px;
+    --spacing-unit: 1.2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    padding: calc(var(--spacing-unit) * 0.8) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .site-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+header .site-title:hover {
+    color: var(--color-accent);
+}
+
+header .tagline {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2) var(--spacing-unit) calc(var(--spacing-unit) * 4);
+}
+
+article.content h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+}
+
+article.content .intro {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: calc(var(--spacing-unit) * 2.5);
+    color: var(--color-text-muted);
+    border-left: 3px solid var(--color-accent);
+    padding-left: var(--spacing-unit);
+    font-style: italic;
+}
+
+article.content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: calc(var(--spacing-unit) * 2.5);
+    margin-bottom: calc(var(--spacing-unit) * 1);
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+}
+
+article.content p {
+    margin-bottom: calc(var(--spacing-unit) * 1.2);
+    font-weight: 400;
+}
+
+article.content .conclusion {
+    margin-top: calc(var(--spacing-unit) * 3);
+    padding: calc(var(--spacing-unit) * 1.5);
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--color-warning);
+    font-style: italic;
+    color: var(--color-text-muted);
+    border-radius: 0 4px 4px 0;
+}
+
+figure {
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+}
+
+figure figcaption {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: calc(var(--spacing-unit) * 0.5);
+    text-align: center;
+    line-height: 1.4;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    border-bottom-color: var(--color-link-hover);
+}
+
+.related-links {
+    margin-top: calc(var(--spacing-unit) * 4);
+    padding: calc(var(--spacing-unit) * 1.5);
+    background: var(--color-bg-alt);
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+}
+
+.related-links h3 {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-unit);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.related-links ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: calc(var(--spacing-unit) * 0.5);
+}
+
+.related-links li {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    padding-left: 1.2em;
+    position: relative;
+}
+
+.related-links li::before {
+    content: "→";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.related-links a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.related-links a:hover {
+    color: var(--color-link);
+}
+
+footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Classification badge style */
+.classified-badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25em 0.6em;
+    background: var(--color-warning);
+    color: #000;
+    border-radius: 3px;
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Document style sections */
+.doc-highlight {
+    background: rgba(240, 136, 62, 0.1);
+    border-left: 3px solid var(--color-accent);
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.2);
+    margin: calc(var(--spacing-unit) * 1.5) 0;
+    border-radius: 0 4px 4px 0;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --max-width: 100%;
+    }
+
+    html {
+        font-size: 16px;
+    }
+
+    article.content h1 {
+        font-size: 1.8rem;
+    }
+
+    article.content h2 {
+        font-size: 1.25rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    header .tagline {
+        display: none;
+    }
+
+    .related-links ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles */
+@media print {
+    :root {
+        --color-bg: #fff;
+        --color-text: #000;
+        --color-border: #ccc;
+    }
+
+    header {
+        position: static;
+    }
+
+    .related-links {
+        display: none;
+    }
+}
+
+    </style>
+
+    <meta property="og:title" content="Epstein Flight Log: Passenger Manifests and Aviation Records">
+    <meta property="og:description" content="Examine individual Epstein flight log entries with detailed passenger manifests, routes, dates, and flight crew information. Search specific flights and passengers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://epstein-files.news/c/epstein-flight-log">
+    
+    <meta property="og:image" content="https://tse3.mm.bing.net/th/id/OIP.UhULzn2AHTctfbXa_wK83QHaFa?pid=Api">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Epstein Flight Log: Passenger Manifests and Aviation Records">
+    <meta name="twitter:description" content="Examine individual Epstein flight log entries with detailed passenger manifests, routes, dates, and flight crew information. Search specific flights and passengers.">
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="https://epstein-files.news/" class="site-title">Epstein-Files</a>
+            <span class="tagline">Declassified Documents Archive</span>
+        </nav>
+    </header>
+
+    <main>
+        <article class="content">
+            <h1>Epstein Flight Log: Inside the Passenger Manifests</h1>
+
+            
+            <figure>
+                <img src="https://tse3.mm.bing.net/th/id/OIP.UhULzn2AHTctfbXa_wK83QHaFa?pid=Api" alt="" loading="lazy">
+                
+            </figure>
+            
+
+            <div class="intro">
+                Every time Jeffrey Epstein's Boeing 727 lifted off, the pilot recorded the details—date, departure time, destination, and most importantly, the names of every person aboard. These individual flight log entries, maintained as required aviation records, have become invaluable historical documents. They provide objective evidence of who traveled with Epstein, when, and to where—creating an undeniable timeline that has been used in court proceedings, criminal investigations, and journalistic inquiries.
+            </div>
+
+            
+            
+            <section>
+                <h2>Anatomy of a Flight Log Entry</h2>
+                <div class="section-content">
+                    Each flight log entry follows a standard aviation format:<ul><li><strong>Flight date:</strong> Calendar date of the flight</li><li><strong>Aircraft tail number:</strong> Usually N908JE for the Boeing 727</li><li><strong>Departure point:</strong> Airport code and location</li><li><strong>Arrival point:</strong> Destination airport</li><li><strong>Departure time:</strong> When the flight left the ground</li><li><strong>Arrival time:</strong> When the flight landed</li><li><strong>Flight time:</strong> Total hours in the air</li><li><strong>Passenger manifest:</strong> Names of all passengers</li><li><strong>Crew information:</strong> Pilot and co-pilot names</li></ul>This standard format ensures the records are legally admissible and factually reliable.
+                </div>
+            </section>
+            
+            
+            <section>
+                <h2>Notable Individual Flights</h2>
+                <div class="section-content">
+                    Certain flight log entries have received particular attention due to who was aboard:<ul><li><strong>September 2002 Africa trip:</strong> Bill Clinton, Kevin Spacey, and Chris Tucker traveled to multiple African nations for AIDS foundation work</li><li><strong>February 1999 London flight:</strong> Prince Andrew traveled with Epstein and a young woman identified as a minor</li><li><strong>Multiple Palm Beach flights:</strong> Young women flown regularly between New York and Florida</li><li><strong>Caribbean helicopter transfers:</strong> Logs showing transport to Little Saint James island</li></ul>Each of these individual entries tells a story about who was in Epstein's orbit at specific moments in time.
+                </div>
+            </section>
+            
+            
+            <section>
+                <h2>Patterns Revealed in the Logs</h2>
+                <div class="section-content">
+                    Analysis of individual flight log entries reveals disturbing patterns:<ul><li><strong>Young female passengers:</strong> Numerous entries show young women identified only by first name or initials</li><li><strong>Recurring destinations:</strong> Regular flights to locations where abuse allegedly occurred</li><li><strong>Timing correlations:</strong> Flight dates often match victim accounts</li><li><strong>Guest transportation:</strong> Evidence of wealthy and powerful individuals being flown to Epstein properties</li></ul>Researchers have cross-referenced individual entries with victim testimony, property records, and other evidence to build comprehensive timelines.
+                </div>
+            </section>
+            
+            <figure>
+                <img src="https://tse2.mm.bing.net/th/id/OIP.YcGANIKqH0HIf7UuQ2hE4wHaEK?pid=Api" alt="" loading="lazy">
+                
+            </figure>
+            
+            
+            <section>
+                <h2>How to Read and Interpret Flight Logs</h2>
+                <div class="section-content">
+                    Understanding flight log entries requires context:<ul><li><strong>Abbreviations:</strong> Airport codes (TEB=Teterboro, PBI=Palm Beach) and common abbreviations</li><li><strong>Name variations:</strong> Some passengers appear under different name spellings or nicknames</li><li><strong>Guest vs. victim:</strong> Presence on a log doesn't indicate knowledge of crimes</li><li><strong>Corroboration:</strong> Logs are strongest when combined with other evidence</li></ul>Responsible analysis of these records requires avoiding assumptions while acknowledging what the documents objectively establish.
+                </div>
+            </section>
+            
+            
+            <section>
+                <h2>Legal Significance of Individual Entries</h2>
+                <div class="section-content">
+                    Individual flight log entries have been used as evidence in multiple proceedings:<ul><li><strong>Criminal cases:</strong> Prosecutors used logs to establish movement patterns</li><li><strong>Civil litigation:</strong> Attorneys used entries to corroborate victim testimony</li><li><strong>Maxwell trial:</strong> Flight records helped establish her presence on trips</li><li><strong>Investigative journalism:</strong> Reporters used logs to verify claims and timelines</li></ul>The value of these records lies in their objectivity—they were created by aviation professionals for regulatory purposes, not as evidence in criminal cases.
+                </div>
+            </section>
+            
+            
+
+            <div class="conclusion">
+                The individual flight log entries from Epstein's aircraft fleet form an invaluable historical record. Each page documents a specific moment—a particular flight with particular passengers going to a particular destination. While any single entry tells only part of the story, together they create a comprehensive picture of Epstein's movements, his network of contacts, and the scope of his operations. These records have proven crucial in holding people accountable and will continue to serve as primary source documents for understanding one of the most significant criminal cases of the 21st century.
+            </div>
+
+            
+            <aside class="related-links">
+                <h3>Related Files</h3>
+                <ul>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-flight-logs">Epstein flight logs complete aviation records</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-flight-logs-list">Epstein flight logs list all passengers</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-passenger-list">Epstein passenger list who flew</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-flight-records">Epstein flight records aviation data</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-plane-passengers">Epstein plane passengers who flew</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-jet-logs">Epstein jet logs Boeing 727</a></li>
+                
+                </ul>
+            </aside>
+            
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Epstein-Files. All rights reserved.</p>
+    </footer>
+
+    <script src="https://epstein-files.news/js/analytics.js"></script>
+    <script src="https://epstein-files.news/js/ads.js"></script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epstein Flight Records: Complete Aviation Data & Passenger Analysis</title>
+    <meta name="description" content="Complete analysis of Jeffrey Epstein's flight records spanning 1995-2016. Who flew, where they went, and what the aviation logs reveal about his operations.">
+    <meta name="keywords" content="Epstein flight records, Epstein aviation data, Epstein flight logs, Epstein plane manifests">
+    <link rel="canonical" href="https://epstein-files.news/c/epstein-flight-records">
+    <style>
+        :root {
+    --color-bg: #0D1117;
+    --color-bg-alt: #161B22;
+    --color-text: #E6EDF3;
+    --color-text-muted: #8B949E;
+    --color-link: #58A6FF;
+    --color-link-hover: #79C0FF;
+    --color-border: #30363D;
+    --color-accent: #F0883E;
+    --color-warning: #D29922;
+
+    --font-body: 'Georgia', 'Times New Roman', serif;
+    --font-heading: '-apple-system', BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+    --max-width: 800px;
+    --spacing-unit: 1.2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    padding: calc(var(--spacing-unit) * 0.8) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .site-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+header .site-title:hover {
+    color: var(--color-accent);
+}
+
+header .tagline {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2) var(--spacing-unit) calc(var(--spacing-unit) * 4);
+}
+
+article.content h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+}
+
+article.content .intro {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: calc(var(--spacing-unit) * 2.5);
+    color: var(--color-text-muted);
+    border-left: 3px solid var(--color-accent);
+    padding-left: var(--spacing-unit);
+    font-style: italic;
+}
+
+article.content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: calc(var(--spacing-unit) * 2.5);
+    margin-bottom: calc(var(--spacing-unit) * 1);
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+}
+
+article.content p {
+    margin-bottom: calc(var(--spacing-unit) * 1.2);
+    font-weight: 400;
+}
+
+article.content .conclusion {
+    margin-top: calc(var(--spacing-unit) * 3);
+    padding: calc(var(--spacing-unit) * 1.5);
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--color-warning);
+    font-style: italic;
+    color: var(--color-text-muted);
+    border-radius: 0 4px 4px 0;
+}
+
+figure {
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+}
+
+figure figcaption {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: calc(var(--spacing-unit) * 0.5);
+    text-align: center;
+    line-height: 1.4;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    border-bottom-color: var(--color-link-hover);
+}
+
+.related-links {
+    margin-top: calc(var(--spacing-unit) * 4);
+    padding: calc(var(--spacing-unit) * 1.5);
+    background: var(--color-bg-alt);
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+}
+
+.related-links h3 {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-unit);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.related-links ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: calc(var(--spacing-unit) * 0.5);
+}
+
+.related-links li {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    padding-left: 1.2em;
+    position: relative;
+}
+
+.related-links li::before {
+    content: "→";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.related-links a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.related-links a:hover {
+    color: var(--color-link);
+}
+
+footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Classification badge style */
+.classified-badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25em 0.6em;
+    background: var(--color-warning);
+    color: #000;
+    border-radius: 3px;
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Document style sections */
+.doc-highlight {
+    background: rgba(240, 136, 62, 0.1);
+    border-left: 3px solid var(--color-accent);
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.2);
+    margin: calc(var(--spacing-unit) * 1.5) 0;
+    border-radius: 0 4px 4px 0;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --max-width: 100%;
+    }
+
+    html {
+        font-size: 16px;
+    }
+
+    article.content h1 {
+        font-size: 1.8rem;
+    }
+
+    article.content h2 {
+        font-size: 1.25rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    header .tagline {
+        display: none;
+    }
+
+    .related-links ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles */
+@media print {
+    :root {
+        --color-bg: #fff;
+        --color-text: #000;
+        --color-border: #ccc;
+    }
+
+    header {
+        position: static;
+    }
+
+    .related-links {
+        display: none;
+    }
+}
+
+    </style>
+
+    <meta property="og:title" content="Epstein Flight Records: Complete Aviation Data & Passenger Analysis">
+    <meta property="og:description" content="Complete analysis of Jeffrey Epstein's flight records spanning 1995-2016. Who flew, where they went, and what the aviation logs reveal about his operations.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://epstein-files.news/c/epstein-flight-records">
+    
+    <meta property="og:image" content="https://archive.org/services/img/jeffreyepsteinflightmanifestrecords19972006/full/pct:200/0/default.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Epstein Flight Records: Complete Aviation Data & Passenger Analysis">
+    <meta name="twitter:description" content="Complete analysis of Jeffrey Epstein's flight records spanning 1995-2016. Who flew, where they went, and what the aviation logs reveal about his operations.">
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="https://epstein-files.news/" class="site-title">Epstein-Files</a>
+            <span class="tagline">Declassified Documents Archive</span>
+        </nav>
+    </header>
+
+    <main>
+        <article class="content">
+            <h1>Epstein Flight Records: What Aviation Data Reveals</h1>
+
+            
+            <figure>
+                <img src="https://archive.org/services/img/jeffreyepsteinflightmanifestrecords19972006/full/pct:200/0/default.jpg" alt="Jeffrey Epstein Flight Manifest Records 1997 2006 : Free Download, Borrow, and Streaming ..." loading="lazy">
+                
+                <figcaption>Jeffrey Epstein Flight Manifest Records 1997 2006 : Free Download, Borrow, and Streaming ...</figcaption>
+                
+            </figure>
+            
+
+            <div class="intro">
+                Flight logs don't lie. They record every departure, arrival, and passenger with cold precision. When investigators obtained Jeffrey Epstein's aviation records, they gained something invaluable: concrete evidence of who traveled with him, when, and where. These logs would become central to understanding the scope of his operations.
+            </div>
+
+            
+            
+            <section>
+                <h2>The Fleet: How Epstein Traveled</h2>
+                <div class="section-content">
+                    Epstein operated multiple aircraft over the years. His most famous was a <strong>Boeing 727</strong> nicknamed by critics the "Lolita Express." He also flew a <strong>Gulfstream IV</strong> and occasionally chartered other aircraft. The 727 was particularly notable because such a large plane seemed excessive for one man – unless he regularly carried groups. Flight logs show the 727 made <strong>hundreds of flights</strong> between 1995 and 2016, primarily between New York, Florida, the Caribbean, and international destinations.
+                </div>
+            </section>
+            
+            
+            <section>
+                <h2>Passenger Documentation</h2>
+                <div class="section-content">
+                    Federal aviation regulations require passenger manifests. Epstein's logs recorded names, dates, departure points, and destinations. These weren't informal notes – they were official records that pilots were legally required to maintain. The logs show <strong>passengers ranging from world leaders to unidentified women</strong> listed only by first name. This disparity in documentation raised questions about who some passengers were and why their full identities weren't recorded.
+                </div>
+            </section>
+            
+            
+            <section>
+                <h2>Key Destinations</h2>
+                <div class="section-content">
+                    The flight records reveal a pattern of destinations:<ul><li><strong>Teterboro, New Jersey</strong> – Epstein's primary airport near Manhattan</li><li><strong>West Palm Beach, Florida</strong> – Access to his mansion</li><li><strong>St. Thomas, US Virgin Islands</strong> – Gateway to Little Saint James island</li><li><strong>Paris, France</strong> – His apartment near the Champs-Elysees</li><li><strong>London, UK</strong> – Connections to British elites</li><li><strong>Columbus, Ohio</strong> – Les Wexner's headquarters</li></ul>The frequency and combination of these destinations told investigators about Epstein's operations across multiple jurisdictions.
+                </div>
+            </section>
+            
+            <figure>
+                <img src="https://imgv2-1-f.scribdassets.com/img/document/504091323/original/a515cbf81b/1684657093?v=1" alt="Epstein Flight Logs (Public) | PDF | Aviation | Aircraft" loading="lazy">
+                
+                <figcaption>Epstein Flight Logs (Public) | PDF | Aviation | Aircraft</figcaption>
+                
+            </figure>
+            
+            
+            <section>
+                <h2>Notable Passengers</h2>
+                <div class="section-content">
+                    The flight records name passengers who would become subjects of intense scrutiny:<ul><li><strong>Bill Clinton</strong> – 26 documented flights</li><li><strong>Prince Andrew</strong> – Multiple trips including to Epstein's island</li><li><strong>Kevin Spacey</strong> – At least one documented flight</li><li><strong>Naomi Campbell</strong> – Multiple trips</li></ul>But the logs also show many flights with only Epstein, his staff, and unnamed or minimally identified passengers. These are the flights investigators found most concerning.
+                </div>
+            </section>
+            
+            
+            <section>
+                <h2>Gaps and Questions</h2>
+                <div class="section-content">
+                    The flight records have <strong>significant gaps</strong>. Some years have extensive documentation while others are sparse. Some logs appear to be missing entirely. Investigators questioned whether records were deliberately destroyed. Additionally, the logs only show passengers who were officially recorded – anyone flying without documentation wouldn't appear. These gaps have fueled ongoing questions about the full scope of Epstein's travel.
+                </div>
+            </section>
+            
+            
+
+            <div class="conclusion">
+                The Epstein flight records provide crucial evidence but an incomplete picture. They prove who traveled with him and where they went, but they don't tell us what happened on those flights or at those destinations. They're a starting point for investigation, not a final accounting. The records that do exist have been essential for victims seeking justice and investigators building cases.
+            </div>
+
+            
+            <aside class="related-links">
+                <h3>Related Files</h3>
+                <ul>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-flight-logs">Epstein flight logs complete</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-jet-logs">Epstein jet logs Boeing 727</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-727-flight-logs">Epstein 727 flight logs</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-flight-logs-list">Epstein flight logs list all passengers</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/epstein-island">Epstein island flights and visits</a></li>
+                
+                    <li><a href="https://epstein-files.news/c/clinton-epstein">Clinton Epstein flight connection</a></li>
+                
+                </ul>
+            </aside>
+            
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Epstein-Files. All rights reserved.</p>
+    </footer>
+
+    <script src="https://epstein-files.news/js/analytics.js"></script>
+    <script src="https://epstein-files.news/js/ads.js"></script>
+</body>
+</html>
