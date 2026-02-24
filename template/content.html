@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ meta.title }}</title>
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="keywords" content="{{ meta.keywords | join(', ') }}">
+    <link rel="canonical" href="{{ domain }}{{ url }}">
+    <style>
+        {{ inline_css }}
+    </style>
+
+    <meta property="og:title" content="{{ meta.title }}">
+    <meta property="og:description" content="{{ meta.description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ domain }}{{ url }}">
+    {% if images and images[0] %}
+    <meta property="og:image" content="{{ images[0].url }}">
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ meta.title }}">
+    <meta name="twitter:description" content="{{ meta.description }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1GY899DPFN"></script>
+    <script src="{{ domain }}/js/analytics.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="{{ domain }}/" class="site-title">{{ site_name }}</a>
+            <span class="tagline">Declassified Documents Archive</span>
+        </nav>
+    </header>
+
+    <main>
+        <article class="content">
+            <h1>{{ content.h1 }}</h1>
+
+            {% if images and images[0] %}
+            <figure>
+                <img src="{{ images[0].url }}" alt="{{ images[0].alt }}" loading="lazy">
+                {% if images[0].caption %}
+                <figcaption>{{ images[0].caption }}</figcaption>
+                {% endif %}
+            </figure>
+            {% endif %}
+
+            <div class="intro">
+                {{ content.intro | safe }}
+            </div>
+
+            {% set middle_pos = (content.sections | length) // 2 %}
+            {% for section in content.sections %}
+            <section>
+                <h2>{{ section.h2 }}</h2>
+                <div class="section-content">
+                    {{ section.content | safe }}
+                </div>
+            </section>
+            {% if loop.index0 == middle_pos and images and images[1] %}
+            <figure>
+                <img src="{{ images[1].url }}" alt="{{ images[1].alt }}" loading="lazy">
+                {% if images[1].caption %}
+                <figcaption>{{ images[1].caption }}</figcaption>
+                {% endif %}
+            </figure>
+            {% endif %}
+            {% endfor %}
+
+            <div class="conclusion">
+                {{ content.conclusion | safe }}
+            </div>
+
+            {% if internal_links %}
+            <aside class="related-links">
+                <h3>Related Files</h3>
+                <ul>
+                {% for link in internal_links %}
+                    <li><a href="{{ domain }}{{ link.url }}">{{ link.anchor }}</a></li>
+                {% endfor %}
+                </ul>
+            </aside>
+            {% endif %}
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; {{ year }} {{ site_name }}. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ domain }}/js/analytics.js"></script>
+    <script src="{{ domain }}/js/ads.js"></script>
+</body>
+</html>
